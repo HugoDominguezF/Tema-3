@@ -28,9 +28,10 @@ public class Ejercicio5 {
 			valor=tabla[num];
 			if(valor==numero) {
 				cantidad++;
-			}else if(valor<num) {
+			}else if(valor>numero) {
 				num=1000;
 			}
+			
 		}
 		if(cantidad>0) {
 			System.out.println("El numero "+numero+" se repite "+cantidad+" veces");
