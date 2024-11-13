@@ -15,7 +15,7 @@ public class Ejercicio2 {
 		double media;
 		double suma = 0;
 
-		for (int alumno = 0; alumno < 4; alumno++) {
+		for (int alumno = 0; alumno < tabla.length; alumno++) {
 
 			System.out.println("Alumno " + (alumno + 1) + " introduzca sus notas");
 
@@ -32,7 +32,7 @@ public class Ejercicio2 {
 			suma = 0;
 			System.out.print("Alumno " + (linea + 1) + "	");
 
-			for (int notas = 0; notas < 5; notas++) {
+			for (int notas = 0; notas <= tabla.length; notas++) {
 				System.out.print(tabla[linea][notas] + "\t");
 				suma += tabla[linea][notas];
 
