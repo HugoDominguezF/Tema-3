@@ -45,7 +45,7 @@ public class Ejercicio2 {
 
 			System.out.print("  	   " + tabla[linea][4]);
 			System.out.println("\t\t" + tabla[linea][0]);
-		
+
 		}
 		sc.close();
 	}

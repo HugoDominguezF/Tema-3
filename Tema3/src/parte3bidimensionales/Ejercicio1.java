@@ -18,9 +18,9 @@ public class Ejercicio1 {
 		
 		
 		
-		for(int linea=0;linea<3;linea++) {
-			for(int columna=0;columna<6;columna++) {
-				System.out.print(tabla[linea][columna]+" ");
+		for (int linea = 0; linea < 3; linea++) {
+			for (int columna = 0; columna < 6; columna++) {
+				System.out.print(tabla[linea][columna] + " ");
 			}
 			System.out.println();
 		}
