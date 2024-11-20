@@ -22,6 +22,8 @@ public class Ejercicio6 {
 
 		System.out.println(Arrays.toString(respuesta));
 
+		sc.close();
+
 	}
 
 	static int[] suma(int tabla[], int num) {

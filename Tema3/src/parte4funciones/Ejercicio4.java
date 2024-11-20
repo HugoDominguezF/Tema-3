@@ -32,7 +32,7 @@ public class Ejercicio4 {
 
 			if (clave == tabla[contador]) {
 
-				num = contador + 1;
+				num = contador +1;
 
 				noEsta = false;
 
@@ -45,6 +45,6 @@ public class Ejercicio4 {
 			num = -1;
 		}
 
-		return (num);
+		return num;
 	}
 }

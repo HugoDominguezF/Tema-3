@@ -15,24 +15,18 @@ public class Ejercicio5 {
 		System.out.println("Que numero quieres buscar");
 		num = sc.nextInt();
 
-		int resultado[] = buscarTodos(tabla, num);
+		int resultado[] = new int[tamañoArray(tabla, num)];
+		
+		resultado = buscarTodos(tabla, resultado, num);
 
 		System.out.println(Arrays.toString(resultado));
 		sc.close();
 	}
 
-	static int[] buscarTodos(int tabla[], int num) {
-
-		int tamaño = 0;
+	static int[] buscarTodos(int tabla[], int resultado[], int num) {
 		int siguiente = 0;
 
-		for (int contador = 0; contador < tabla.length; contador++) {
-			if (tabla[contador] == num) {
-				tamaño++;
-			}
-		}
-
-		int tablaNueva[] = new int[tamaño];
+		int tablaNueva[] = new int[resultado.length];
 
 		for (int contador = 0; contador < tabla.length; contador++) {
 			if (tabla[contador] == num) {
@@ -42,5 +36,17 @@ public class Ejercicio5 {
 		}
 
 		return tablaNueva;
+	}
+
+	static int tamañoArray(int tabla[], int num) {
+
+		int tamaño = 0;
+
+		for (int contador = 0; contador < tabla.length; contador++) {
+			if (tabla[contador] == num) {
+				tamaño++;
+			}
+		}
+		return tamaño;
 	}
 }
