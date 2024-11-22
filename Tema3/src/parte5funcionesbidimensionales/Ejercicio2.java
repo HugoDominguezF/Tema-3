@@ -21,9 +21,11 @@ public class Ejercicio2 {
 		int tabla[][] = new int[filas][columnas];
 
 		int tablaFinal[][] = transpuesta(tabla);
-
+		
 		for (int linea = 0; linea < tablaFinal.length; linea++) {
+			
 			System.out.print(Arrays.toString(tablaFinal[linea]));
+			
 			System.out.println("");
 		}
 		sc.close();
@@ -34,6 +36,7 @@ public class Ejercicio2 {
 		int num = 1;
 
 		int tablaNueva[][] = new int[tabla[1].length][tabla.length];
+		
 		for (int linea = 0; linea < tabla.length; linea++) {
 
 			for (int columna = 0; columna < tabla[linea].length; columna++, num++) {
