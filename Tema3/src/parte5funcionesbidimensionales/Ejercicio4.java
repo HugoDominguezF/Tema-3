@@ -55,16 +55,15 @@ public class Ejercicio4 {
 		for (int contador = 0; contador < tablaL.length; contador++) {
 
 			sumaL += tablaL[contador];
-			sumaC += tablaC[contador];
+			sumaC += tablaC[contador];	
 
-			if (sumaL == num && sumaC == num) {
+		}
+		if (sumaL == num && sumaC == num) {
 
-				igual = true;
+			igual = true;
 
-			} else {
-				igual = false;
-			}
-
+		} else {
+			igual = false;
 		}
 
 		return igual;
