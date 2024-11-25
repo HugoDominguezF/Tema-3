@@ -28,7 +28,7 @@ public class Ejercicio4 {
 
 		boolean verificar = true;
 
-		for (int linea = 0; linea < tabla.length; linea++) {
+		for (int linea = 0; linea < tabla.length && verificar; linea++) {
 			
 				for (int columna = 0; columna < tabla[0].length; columna++) {
 
