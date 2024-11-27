@@ -30,6 +30,7 @@ public class Ejercicio5 {
 		int tabla2[][] = new int[tabla.length][tabla[0].length];
 
 		for (int i = 0; i < tabla.length; i++) {
+			 
 			for (int j = 0; j < tabla[0].length; j++) {
 
 				num = i - (tabla.length - 1);
