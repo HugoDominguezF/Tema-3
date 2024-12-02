@@ -34,30 +34,70 @@ public class Ejercicio4 {
 
 		case 'D' -> dama(tabla, x, y);
 
-		case 'C' -> System.out.println();
+		case 'C' -> caballo(tabla, x, y);
 
 		}
 
+	}
+
+	static String[][] caballo(String[][] tabla, int x, int y) {
+
+		String tabla2[][] = new String[tabla.length][tabla[0].length];
+
+		tabla2 = llenar(tabla2, x, y);
+
+		tabla2[x][y] = "C";
+
+		if (y + 2 < tabla.length && x + 1 < tabla.length) {
+			tabla2[x + 1][y + 2] = "X";
+		}
+		if (y + 2 < tabla.length && x - 1 >= 0) {
+			tabla2[x - 1][y + 2] = "X";
+		}
+
+		if (y - 2 >= 0 && x + 1 < tabla.length) {
+			tabla2[x + 1][y - 2] = "X";
+		}
+		if (y - 2 >= 0 && x - 1 >= 0) {
+			tabla2[x - 1][y - 2] = "X";
+		}
+		if (x + 2 < tabla.length && y + 1 < tabla.length) {
+			tabla2[x + 2][y + 1] = "X";
+		}
+		if (x + 2 < tabla.length && y - 1 >= 0) {
+			tabla2[x + 2][y - 1] = "X";
+		}
+		if (x - 2 >= 0 && y + 1 < tabla.length) {
+			tabla2[x - 2][y + 1] = "X";
+		}
+		if (y - 2 >= 0 && y - 1 >= 0) {
+			tabla2[x - 2][y - 1] = "X";
+		}
+
+		imprimir(tabla2);
+
+		return tabla2;
 	}
 
 	static String[][] torre(String[][] tabla, int x, int y) {
 
 		String tabla2[][] = new String[tabla.length][tabla[0].length];
 
-		tabla2=llenar(tabla2,x,y);
-		
-			for(int j=0;j<tabla.length;j++) {
-				tabla2[x][j]= "X";
-				tabla2[j][y]= "X";		
-			}
-			
-		tabla2[x][y]="T";
+		tabla2 = llenar(tabla2, x, y);
+
+		for (int j = 0; j < tabla.length; j++) {
+			tabla2[x][j] = "X";
+			tabla2[j][y] = "X";
+		}
+
+		tabla2[x][y] = "T";
 
 		imprimir(tabla2);
-		
+
 		return tabla2;
 
 	}
+
 	static String[][] arfil(String[][] tabla, int x, int y) {
 
 		boolean fin = false;
@@ -68,7 +108,7 @@ public class Ejercicio4 {
 
 		String tabla2[][] = new String[tabla.length][tabla[0].length];
 
-		tabla2=llenar(tabla2, x, y);
+		tabla2 = llenar(tabla2, x, y);
 
 		for (int i = 0; i < 4; i++) {
 			x2 = x;
@@ -107,26 +147,27 @@ public class Ejercicio4 {
 
 			}
 		}
-		tabla2[x][y]="A";
-		
+		tabla2[x][y] = "A";
+
 		imprimir(tabla2);
 
 		return tabla2;
 
 	}
-	static String[][] dama(String[][] tabla, int x, int y){
-		
+
+	static String[][] dama(String[][] tabla, int x, int y) {
+
 		String tabla2[][] = new String[tabla.length][tabla[0].length];
-	
+
 		boolean fin = false;
 		int x2 = x;
 		int y2 = y;
 
-		tabla2=llenar(tabla2,x,y);
-		
-		for(int j=0;j<tabla.length;j++) {
-			tabla2[x][j]= "X";
-			tabla2[j][y]= "X";		
+		tabla2 = llenar(tabla2, x, y);
+
+		for (int j = 0; j < tabla.length; j++) {
+			tabla2[x][j] = "X";
+			tabla2[j][y] = "X";
 		}
 
 		for (int i = 0; i < 4; i++) {
@@ -166,13 +207,14 @@ public class Ejercicio4 {
 
 			}
 		}
-		
-		tabla2[x][y]="D";
-		
+
+		tabla2[x][y] = "D";
+
 		imprimir(tabla2);
-		
+
 		return tabla2;
 	}
+
 	static String[][] llenar(String[][] tabla2, int x, int y) {
 
 		for (int i = 0; i < tabla2.length; i++) {
@@ -180,11 +222,12 @@ public class Ejercicio4 {
 				tabla2[i][j] = " ";
 			}
 		}
-		
+
 		return tabla2;
 	}
+
 	static void imprimir(String[][] tabla2) {
-		
+
 		for (int i = 0; i < tabla2.length; i++) {
 
 			System.out.print(Arrays.toString(tabla2[i]));
@@ -192,4 +235,5 @@ public class Ejercicio4 {
 			System.out.println();
 		}
 	}
+
 }
